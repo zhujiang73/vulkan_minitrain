@@ -5,8 +5,8 @@
 ## 1. 这是什么：Vulkan 训练 + 8.34 M 参数的小模型
 
 [Vulkan](https://www.vulkan.org/) 是跨厂商的 GPU 计算/图形 API：NVIDIA、AMD、Intel 的显卡，
-Windows / Linux / Android 都能跑。深度学习生态长期被 CUDA 绑定，换一张卡就要重写训练栈；
-**这个项目要回答的问题是：能不能只用 Vulkan，把一个语言模型从随机初始化一路训到会说人话。**
+Windows / Linux / Android 都能跑。
+**这个项目就是实验只用 Vulkan，把一个语言模型从随机初始化一路训到会说人话。**
 
 能。下面是实测结果（单张 RTX 4060 Ti，从零训练约 511 M token 之后，val 1.79）：
 
@@ -184,15 +184,12 @@ python tools\make-slices.py --slice-mb 390
 
 ---
 
-构建与文档
+**构建与文档**：
 
 ```powershell
 cmake -B build -G "Visual Studio 18 2026" -A x64
 cmake --build build --config Release --target vulkan-minitrain 
 ```
-
-| [`README.en.md`](README.en.md) | English version | (英文版与本文不一致之处以本文为准)
-
 
     本项目的主要工作是在 deepseek harness 中完成的。
     
