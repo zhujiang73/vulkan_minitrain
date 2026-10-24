@@ -1,0 +1,15 @@
+{
+  "name": "minitrain-6l288-4k",
+  "arch": "llama",
+  "n_layer": 6,
+  "n_embd": 288,
+  "n_head": 6,
+  "n_head_kv": 6,
+  "n_ff": 768,
+  "n_ctx_train": 1024,
+  "rms_eps": 1e-05,
+  "rope_freq_base": 10000.0,
+  "init_std": 0.02,
+  "seed": 1234,
+  "vocab_dir": "assets/vocab-4k"
+}
